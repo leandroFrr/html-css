@@ -1,8 +1,23 @@
 @charset "UTF-8";
 
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300&display=swap');
+    
+@font-face {
+    font-family: dest;
+    src: url(fonte/Doctor\ Glitch.otf);
+}
+
+
+:root{
+    --fonte-principal:typer;
+    --font-destaque:dest;
+}
+
 *{
     margin: 0px;
     padding: 0px;
+   
 }
 
 body, html{
@@ -15,8 +30,14 @@ header{
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    font-size: 2em;
+    font-size: 3vw;
+    
 }
+
+header>h1{
+    font-family: var(--font-destaque);
+}
+
 header > p{
     padding: 20px;
 }
@@ -35,6 +56,8 @@ section{
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 40px;
+    font-family: Comfortaa;
+   
 }
 .normal{
     background-color: rgb(255, 255, 255);
@@ -44,11 +67,36 @@ section{
 .imagem{
     background-color: rgb(61, 61, 61);
     color: white;
+    background-attachment: fixed;
+    
 }
 
 .imagem>p{
     background-color: rgb(44, 44, 44);
     width: 400px;
+    display: inline-block;
+    padding: 10px;
+}
+
+section#im{
+    background-image: url(imagens/road-8395119_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow:8px 4px 5px 8px black;
+    box-shadow: inset 6px 6px 13px 0 px rgb(73, 71, 71);
+    
+}
+
+section#img{
+    background-image: url(imagens/trail-8395089_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 6px 6px 13px 0 px rgb(73, 71, 71);
+    box-shadow:8px 4px 5px 8px black;
+    
+    
+    
 }
 
 aside{
@@ -56,4 +104,5 @@ aside{
     background-color: black;
     color: white;
     padding: 5px;
+    font-family: var(--fonte-principal);
 }
